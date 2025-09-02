@@ -1,8 +1,12 @@
+
+
 import streamlit as st
 import pandas as pd
 from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode
+from PIL import Image
 
 # ---------- Load data ----------
+
 @st.cache_data
 def load_data():
     df = pd.read_csv(
@@ -53,7 +57,9 @@ def go_next():
     # st.experimental_rerun()
 
 # ---------- Main UI ----------
-st.title('🧘 Values Exercise')
+logo = Image.open('resource/logo.png')
+st.image(logo)
+st.title('Values Exercise')
 
 st.header(f"Step {st.session_state.page}")
 if st.session_state.page == 1:
