@@ -110,7 +110,7 @@ if st.session_state.page < 5 and len(values_to_show) > 0:
         update_mode=GridUpdateMode.VALUE_CHANGED,
         allow_unsafe_jscode=True,
         key=f"aggrid_{st.session_state.page}",
-        height=300,
+        height=1200,
         fit_columns_on_grid_load=True,
         reload_data=False,
     )
